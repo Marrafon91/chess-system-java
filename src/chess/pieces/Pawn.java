@@ -11,7 +11,7 @@ public class Pawn extends ChessPiece {
 		super(board, color);
 	}
 
-	@Override
+	@Override 
 	public boolean[][] possibleMoves() {
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
 
@@ -57,7 +57,6 @@ public class Pawn extends ChessPiece {
 			}
 
 		}
-
 		return mat;
 	}
 
