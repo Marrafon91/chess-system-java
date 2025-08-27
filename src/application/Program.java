@@ -30,9 +30,9 @@ public class Program {
 				UI.jumpRows();
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);
 				System.out.print("Target: ");
-				ChessPosition targer = UI.readChessPosition(sc);
+				ChessPosition target = UI.readChessPosition(sc);
 
-				ChessPiece capturedPiece = chessMatch.performChessMove(source, targer);
+				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
@@ -40,7 +40,7 @@ public class Program {
 
 				if (chessMatch.getPromoted() != null) {
 					System.out.print("Enter piece for promotion (B/N/R/Q)");
-					String type = sc.nextLine();
+					String type = sc.nextLine().toUpperCase();
 					chessMatch.replacePromotedPiece(type);
 				}
 
